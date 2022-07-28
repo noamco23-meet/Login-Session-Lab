@@ -7,8 +7,12 @@
 </head>
 <body>
 
-<!-- Display the variables from the login session here!
- -->
+<!-- Display the variables from the login session here!-->
+{% for quote in login_session %}
+<h1>{{login_session[quote]['quote']}}</h1>
+<h3>{{login_session[quote]['author']}}, {{login_session[quote]['age']}}</h3>
+{% endfor %}
+<a href="{{url_for('home')}}">redirect</a>
 
 </body>
 </html>
