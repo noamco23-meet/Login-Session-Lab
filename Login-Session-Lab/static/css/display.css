@@ -1,0 +1,36 @@
+/* Fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fondamento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&display=swap');
+
+#post {
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: lightsteelblue;
+    border-radius: 10px;
+    width: 60%  ;
+}
+
+#button {
+    color: blue;
+}
+
+h1 {
+    color: greenyellow;
+    font-family: 'Aclonica', sans-serif;
+}
+
+h3 {
+    color: yellow;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+
+}
+
+span {
+    color: #7B5804;
+    font-family: 'Fondamento', cursive; 
+}
+

@@ -1,18 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" href="../static/css/display.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+	<title>Dashboard</title>
 </head>
 <body>
-
-<!-- Display the variables from the login session here!-->
-{% for quote in login_session %}
-<h1>{{login_session[quote]['quote']}}</h1>
-<h3>{{login_session[quote]['author']}}, {{login_session[quote]['age']}}</h3>
-{% endfor %}
-<a href="{{url_for('home')}}">redirect</a>
-
+	<div class="container">
+		<div class="row"><h1>Welcome to your dashboard</h1></div>
+		<div class="row"><h2>Here you can look at all of your saved quotes</h2></div>
+		<div class="row"><h5>(I'm so sorry for the way this site looks, I really tried my best/worst to make it look like this.)</h5></div>
+	</div>
+	<!-- Display the variables from the login session here!-->
+	{% for quote in login_session %}
+	<div class="container" id="post">
+		<h1>{{login_session[quote]['quote']}}</h1>
+		<h3>{{login_session[quote]['author']}}, <span>{{login_session[quote]['age']}}</span></h3>
+	</div>
+	{% endfor %}
+	<div class="container" id="button"><a href="{{url_for('home')}}"><button>Add more!</button></a></div>
+	<video width="1080" height="720">
+	<source src="../media/ad.mp4" type="video/mp4">
+	</video>
+	
+	
 </body>
 </html>
